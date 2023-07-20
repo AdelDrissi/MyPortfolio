@@ -1,0 +1,47 @@
+.anchorLinks__list {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  margin-right: 35px;
+  gap: 10%;
+}
+
+.navbar {
+  display: flex;
+  height: 60px;
+  background-color: grey;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  .IconResponsive {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.name {
+  position: relative;
+  top: 15px;
+  font-size: 22px;
+  font-family: fantasy, sans-serif;
+  color: #fce4ec;
+  text-align: center;
+}
+
+.dev {
+  position: relative;
+  bottom: 20px;
+  font-family: fantasy, sans-serif;
+  color: #fce4ec;
+}
+
+.LinkNavigation {
+  color: #fce4ec;
+}
