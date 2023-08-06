@@ -1,0 +1,42 @@
+.listProjects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+.projectImage {
+  width: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+  padding-top: 25px;
+}
+
+.project {
+  cursor: pointer;
+  box-shadow: 3px 5px 5x grey;
+  border: 1px solid black;
+  margin-top: 10%;
+  height: 83%;
+  border-radius: 10px;
+  margin-left: 10%;
+  width: 80%;
+  box-shadow: 5px 5px 5px grey;
+  transition-duration: 200ms;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.projectTitle {
+  color: #fff;
+  background-color: #583532;
+  margin: 0;
+}
+
+.projetDescription {
+  color: black;
+}
+
+.projectSection {
+  text-align: center;
+  padding-top: 7%;
+}
