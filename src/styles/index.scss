@@ -1,3 +1,18 @@
 @import './Navbar';
 @import './WhoIam';
 @import './Projects';
+@import './Mixins';
+@import './Contact';
+@import './Footer';
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  .sectionTitle {
+    font-size: 26px;
+    color: $millbrook;
+    h2 {
+      font-weight: 400;
+    }
+  }
+}
