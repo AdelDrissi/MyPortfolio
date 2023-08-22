@@ -21,13 +21,13 @@ const Navbar = () => {
       </a>
       <div
         className={`anchorLinks ${
-          isMenuOpen ? 'appearLink--open AppearLink' : ''
+          isMenuOpen ? 'anchorLinks--open AppearLink' : ''
         }`}
       >
         <ul className="anchorLinks__list">
           <li onClick={() => setIsMenuOpen(false)}>
             <a href="#SectionWhoIam" className="LinkNavigation">
-              Mon Portrait
+               Portrait
             </a>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>
