@@ -31,12 +31,12 @@ const Navbar = () => {
             </a>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>
-            <a href="#Projects" className="LinkNavigation">
+            <a href="#projectSection" className="LinkNavigation">
               Projets
             </a>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>
-            <a href="#Contact" className="LinkNavigation">
+            <a href="#sectionContact" className="LinkNavigation">
               Contact
             </a>
           </li>

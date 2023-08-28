@@ -8,7 +8,7 @@ const Projects = () => {
   // Render
 
   return (
-    <section className="projectSection" id="projects" ref={refSection}>
+    <section className="projectSection" id="projectSection" ref={refSection}>
       <div className="sectionTitle">
         <h2> Mes Projets</h2>
       </div>
