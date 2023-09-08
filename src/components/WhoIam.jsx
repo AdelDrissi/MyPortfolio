@@ -1,11 +1,14 @@
 import React from 'react';
 
+
+
 const WhoIam = () => {
   //Render//
 
   return (
     <section className="WhoIam" id="whoIamSection">
       <div className="sectionTitle">
+     
         <h2>Mon Portrait</h2>
       </div>
       <div className="containerPresentation">
@@ -21,8 +24,8 @@ const WhoIam = () => {
               Openclassrooms et j'ai ainsi pu valider ma formation et obtenir
               mon diplôme . <br /> Je suis actuellement à la recherche d'offres
               dans la région île de france . Je suis passionnée par les
-              nouvelles technologies, les jeux vidéos, ainsi que la boulangerie et la
-              pâtisserie.
+              nouvelles technologies, les jeux vidéos, ainsi que la boulangerie
+              et la pâtisserie.
               <br />
               <br />
               Je suis de nature curieux, j’aime apprendre et voir des projets

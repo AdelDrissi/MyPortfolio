@@ -1,6 +1,7 @@
 .sectionContact {
   margin-top: 6%;
 
+
   .container-contact {
     display: flex;
     flex-direction: column;
@@ -20,6 +21,7 @@
         &:hover {
           background-color: $carouselBrown;
           transition-duration: 300ms;
+          
         }
       }
     }

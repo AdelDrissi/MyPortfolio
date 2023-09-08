@@ -26,7 +26,7 @@ const Navbar = () => {
       >
         <ul className="anchorLinks__list">
           <li onClick={() => setIsMenuOpen(false)}>
-            <a href="#SectionWhoIam" className="LinkNavigation">
+            <a href="#whoIamSection" className="LinkNavigation">
                Portrait
             </a>
           </li>

@@ -16,6 +16,9 @@ body {
   .sectionTitle {
     font-size: 26px;
     color: $millbrook;
+    &:hover {
+      color: $carouselBrown;
+    }
     h2 {
       font-weight: 400;
     }
