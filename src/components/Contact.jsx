@@ -1,11 +1,24 @@
 import React from 'react';
+import { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import ScrollReveal from 'scrollreveal';
 
 const Contact = () => {
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    ScrollReveal().reveal(sectionRef.current, {
+      duration: 1400, 
+      distance: '0px', 
+      easing: 'ease-in-out', 
+      interval: 200, 
+      reset: true,
+    });
+  }, []);
+
   return (
-    <section className="sectionContact" id="sectionContact">
+    <section className="sectionContact" id="sectionContact" ref={sectionRef}>
       <div className="sectionTitle">
         <h2>Contact</h2>
       </div>
