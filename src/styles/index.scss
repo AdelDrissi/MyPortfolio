@@ -6,21 +6,54 @@
 @import './Footer';
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'lato', sans-serif;
   margin: 0;
 
   a {
     text-decoration: none;
     color: #fff;
   }
-  .sectionTitle {
-    font-size: 26px;
-    color: $millbrook;
-    &:hover {
-      color: $carouselBrown;
-    }
-    h2 {
-      font-weight: 400;
+
+.sectionTitle {
+  position: relative;
+  display: block;
+  border-radius: 30px;
+  font-size: 30px;
+  font-family: 'lato';
+  text-decoration: none;
+  margin: 30px 90px;
+  border: 2px solid #45a29e;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding: 10px 10px;
+  transition: 1s all ease;
+}
+  .sectionTitle::before{
+  background: #45a29e;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50% );
+  z-index: -1; 
+  transition: all 1s ease;
+  width: 120%;
+  height: 0%;
+}
+
+
+  .sectionTitle:hover::before {
+    height: 180%;
+  }
+
+  h2 {
+    font-weight: 400;
+    margin: 0;
+
+    &:hover{
+
+      color: #fff;
+      transition-duration: 100ms;
     }
   }
 }
