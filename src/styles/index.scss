@@ -15,46 +15,33 @@ body {
     margin-left: 10px;
   }
 
-.sectionTitle {
-  position: relative;
-  display: block;
-  border-radius: 30px;
-  font-size: 30px;
-  font-family: 'lato';
-  text-decoration: none;
-  margin: 30px 90px;
-  border: 2px solid #45a29e;
-  text-transform: uppercase;
-  overflow: hidden;
-  padding: 10px 10px;
-  transition: 1s all ease;
-}
-  .sectionTitle::before{
-  background: #45a29e;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50% );
-  z-index: -1; 
-  transition: all 1s ease;
-  width: 120%;
-  height: 0%;
-}
-
-
-  .sectionTitle:hover::before {
-    height: 180%;
+  .sectionTitle {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    font-family: 'lato';
+    text-decoration: none;
+    margin: 30px 90px;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding: 10px 10px;
+    transition: 1s all ease;
+  }
+  .sectionTitle::before {
+    background: #45a29e;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 1s ease;
+    width: 120%;
+    height: 0%;
   }
 
   h2 {
     font-weight: 400;
     margin: 0;
-
-    &:hover{
-
-      color: #fff;
-      transition-duration: 100ms;
-    }
   }
 }

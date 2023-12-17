@@ -1,60 +1,134 @@
-import React from 'react';
-import { useRef, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import ScrollReveal from 'scrollreveal';
+// Importer les bibliothèques React et useState
+import React, { useState } from 'react';
 
+
+// Composant du formulaire de contact
 const Contact = () => {
-  const sectionRef = useRef(null);
-  useEffect(() => {
-    ScrollReveal().reveal(sectionRef.current, {
-      duration: 1400, 
-      distance: '0px', 
-      easing: 'ease-in-out', 
-      interval: 200, 
-      reset: true,
+  // État initial du formulaire
+  const [formData, setFormData] = useState({
+    personalInfo: {
+      name: '',
+      email: '',
+      phoneNumber: '',
+    },
+    subject: '',
+    message: '',
+  });
+
+  // Fonction appelée lorsqu'un champ du formulaire change
+  const handleChange = (e, section) => {
+    const { name, value } = e.target;
+    // Mettre à jour l'état du formulaire avec la nouvelle valeur
+    setFormData((prevData) => ({
+      ...prevData,
+      [section]: {
+        ...prevData[section],
+        [name]: value,
+      },
+    }));
+  };
+
+  // Fonction appelée lors de la soumission du formulaire
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Vous pouvez ajouter ici la logique pour traiter les données du formulaire (par exemple, envoi à un serveur)
+    console.log(formData);
+    // Réinitialiser le formulaire après soumission si nécessaire
+    setFormData({
+      personalInfo: {
+        name: '',
+        email: '',
+        phoneNumber: '',
+      },
+      subject: '',
+      message: '',
     });
-  }, []);
+  };
 
+  // Rendu du formulaire
   return (
-    <section className="sectionContact" id="sectionContact" ref={sectionRef}>
+    <div className="contact-form-container">
       <div className="sectionTitle">
-        <h2>Contact</h2>
+        <h2> Contactez moi !</h2>
       </div>
-      <div className="container-contact">
-        <a href="https://www.linkedin.com/in/adel-6822261ba/">
-          <div className="contactIcons">
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className="icons"
-              aria-label="lien linkedin"
+      <form className="contact-form" onSubmit={handleSubmit}>
+        {/* Partie 1 : Informations personnelles */}
+        <div className="form-section">
+          <label>
+            Nom:
+            <input
+              type="text"
+              name="name"
+              value={formData.personalInfo.name}
+              onChange={(e) => handleChange(e, 'personalInfo')}
+              required
             />
-          </div>
-        </a>
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              value={formData.personalInfo.email}
+              onChange={(e) => handleChange(e, 'personalInfo')}
+              required
+            />
+          </label>
+          <label>
+            Téléphone Portable:
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.personalInfo.phoneNumber}
+              onChange={(e) => handleChange(e, 'personalInfo')}
+              required
+            />
+          </label>
+        </div>
 
-        <a href="https://github.com/Adelwa91">
-          <div className="contactIcons">
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="icons"
-              aria-label="lien github"
+        {/* Partie 2 : Sujet du message */}
+        <div className="form-section">
+          <label>
+            Sujet:
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => handleChange(e, 'subject')}
+              required
             />
-          </div>
-        </a>
+          </label>
+        </div>
 
-        <a href="mailto: Adeldrissi50@gmail.fr">
-          <div className="contactIcons">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="icons"
-              aria-label="envoyer un email"
+        {/* Partie 3 : Message */}
+        <div className="form-section">
+          <label>
+            Message:
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={(e) => handleChange(e, 'message')}
+              required
             />
-          </div>
-        </a>
-      </div>
-    </section>
+          </label>
+        </div>
+
+        {/* Bouton Soumettre */}
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
   );
 };
 
-export default Contact;
+// Composant principal de l'application
+function App() {
+  return (
+    <div className="App">
+      {/* Afficher le formulaire de contact */}
+      <Contact />
+    </div>
+  );
+}
+
+// Exporter le composant principal
+export default App;
