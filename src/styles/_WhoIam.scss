@@ -5,7 +5,39 @@
 
 .WhoIam {
   padding-top: 100px;
-  
+  background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
+  height: 65vh;
+}
+
+.mydescription {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.Name-who {
+  font-size: 7vh;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.button-projects {
+  margin-top: 4rem;
+}
+
+.btn {
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 10px 10px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  &:hover{
+transform: scale(1.1);
+  }
+}
+
+.btn-projects {
+  padding: 1.5rem 8.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .textPresentation {

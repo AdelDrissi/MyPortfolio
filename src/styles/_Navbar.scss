@@ -1,16 +1,14 @@
 @import './Mixins';
 @import './variables.scss';
 
-.navbar {
+.header {
   z-index: 10;
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: $millbrook;
+  padding-top: 20px;
+  background: #fff;
   height: 60px;
-  color: #fff;
-  border: 1px solid black;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   .AdelDev {
@@ -27,9 +25,10 @@
     }
     .name {
       position: relative;
-      top: 8px;
+      color: black;
       font-family: 'Manrope', sans-serif;
       font-size: 20px;
+      text-transform: uppercase;
     }
     .dev {
       font-size: 14px;
@@ -60,8 +59,7 @@
 
       @include tabAndLess {
         flex-direction: column;
-        background-color: $millbrook;
-        top: 63px;
+        background-color: whitesmoke;
         width: 100%;
         padding: 0;
       }
@@ -74,28 +72,34 @@
         @include tabAndLess {
           height: 50px;
           width: 100%;
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid black;
           line-height: 50px;
 
           &:nth-child(1) {
-            border-top: 1px solid #fff;
+            border-top: 1px solid black;
             margin-top: 50px;
           }
         }
-      
       }
     }
   }
   .IconResponsive {
     display: none;
     padding: 30px;
+    top: 8px;
     font-size: 26px;
     @include tabAndLess {
       display: inline;
       position: absolute;
       right: 10px;
+      top: -10px;
     }
   }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .AppearLink {

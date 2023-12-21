@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <section className="projectSection" id="projectSection" ref={refSection}>
       <div className="sectionTitle">
-        <h2> Mes Projets</h2>
+        <h2> Projects</h2>
       </div>
       <div className="listProjects">
         {listProjects.map((proj) => (
