@@ -1,15 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link as ScrollLink } from 'react-scroll';
 import { useState } from 'react';
 
-const Navbar = () => {
+const Header = () => {
   //States
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //Comportement
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
 
   //Render
@@ -26,19 +26,19 @@ const Navbar = () => {
         >
           <ul className="anchorLinks__list">
             <li onClick={() => setIsMenuOpen(false)}>
-              <a href="#whoIamSection" className="LinkNavigation">
-                Portrait
-              </a>
+              <ScrollLink to="whoIamSection" smooth={true} duration={800}>
+                About
+              </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <a href="#projectSection" className="LinkNavigation">
-                Projets
-              </a>
+              <ScrollLink to="projectSection" smooth={true} duration={800}>
+                Projects
+              </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <a href="#sectionContact" className="LinkNavigation">
+              <ScrollLink to="sectionContact" smooth={true} duration={800}>
                 Contact
-              </a>
+              </ScrollLink>
             </li>
           </ul>
         </div>
@@ -54,4 +54,4 @@ const Navbar = () => {
     </header>
   );
 };
-export default Navbar;
+export default Header;

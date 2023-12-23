@@ -1,53 +1,55 @@
-/* src/App.css */
-
-/* Style du formulaire de contact container */
-.contact-form-container {
-  max-width: 600px;
-  margin: 0 auto;
+/* ContactForm.css */
+.contact-container {
+  background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
+  padding: 20px;
+  min-height: 100vh; /* Au moins 100% de la hauteur de la vue */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style du formulaire de contact */
 .contact-form {
+  background-color: #fff; /* Fond blanc pour le formulaire */
+  color: #333; /* Texte foncé pour un meilleur contraste */
+  padding: 25px 25px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form h2 {
+  text-align: center;
+}
+
+.contact-form form {
   display: flex;
   flex-direction: column;
 }
 
-/* Style des sections du formulaire */
-.form-section {
-  margin-bottom: 20px;
-}
-
-/* Style des étiquettes */
-label {
+.contact-form label {
   margin-bottom: 8px;
+  display: contents;
 }
 
-/* Style des champs de saisie */
-input,
-textarea {
-  width: 100%;
+.contact-form input,
+.contact-form textarea {
   padding: 8px;
-  margin-bottom: 8px;
+  border: 2px solid;
+  border-radius: 5px;
+  margin-bottom: 16px;
 }
 
-/* Style du bouton Soumettre */
-button {
-  background-color: #007bff;
+.contact-form button {
+  background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  border: none;
   cursor: pointer;
-  width: 100%; /* Bouton en pleine largeur */
-  box-sizing: border-box;
+  font-size: 16px;
 }
 
-/* Ajouter un peu de style pour un look propre */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+.contact-form button:hover {
+  background-color: #45a049;
 }

@@ -1,134 +1,51 @@
-// Importer les bibliothèques React et useState
-import React, { useState } from 'react';
+import React from 'react';
+import { useEffect, useRef } from 'react';
+import ScrollReveal from 'scrollreveal';
 
-
-// Composant du formulaire de contact
 const Contact = () => {
-  // État initial du formulaire
-  const [formData, setFormData] = useState({
-    personalInfo: {
-      name: '',
-      email: '',
-      phoneNumber: '',
-    },
-    subject: '',
-    message: '',
-  });
-
-  // Fonction appelée lorsqu'un champ du formulaire change
-  const handleChange = (e, section) => {
-    const { name, value } = e.target;
-    // Mettre à jour l'état du formulaire avec la nouvelle valeur
-    setFormData((prevData) => ({
-      ...prevData,
-      [section]: {
-        ...prevData[section],
-        [name]: value,
-      },
-    }));
-  };
-
-  // Fonction appelée lors de la soumission du formulaire
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Vous pouvez ajouter ici la logique pour traiter les données du formulaire (par exemple, envoi à un serveur)
-    console.log(formData);
-    // Réinitialiser le formulaire après soumission si nécessaire
-    setFormData({
-      personalInfo: {
-        name: '',
-        email: '',
-        phoneNumber: '',
-      },
-      subject: '',
-      message: '',
+  const refSection = useRef(null);
+  useEffect(() => {
+    ScrollReveal().reveal(refSection.current, {
+      duration: 1400,
+      distance: '0px',
+      easing: 'ease-in-out',
+      interval: 200,
+      reset: true,
     });
-  };
+  }, []);
 
-  // Rendu du formulaire
   return (
-    <div className="contact-form-container">
-      <div className="sectionTitle">
-        <h2> Contactez moi !</h2>
-      </div>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        {/* Partie 1 : Informations personnelles */}
-        <div className="form-section">
+    <div className="contact-container">
+      <div className="contact-form">
+        <div className="sectionTitle" id='sectionContact'>
+          <h2> Contact Me</h2>
+        </div>
+        <form>
           <label>
-            Nom:
-            <input
-              type="text"
-              name="name"
-              value={formData.personalInfo.name}
-              onChange={(e) => handleChange(e, 'personalInfo')}
-              required
-            />
+            Name:
+            <input type="text" name="name" required />
           </label>
           <label>
             Email:
-            <input
-              type="email"
-              name="email"
-              value={formData.personalInfo.email}
-              onChange={(e) => handleChange(e, 'personalInfo')}
-              required
-            />
+            <input type="text" name="email" id='email' required />
           </label>
           <label>
-            Téléphone Portable:
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={formData.personalInfo.phoneNumber}
-              onChange={(e) => handleChange(e, 'personalInfo')}
-              required
-            />
+            Number:
+            <input type="tel" name="phone" required />
           </label>
-        </div>
-
-        {/* Partie 2 : Sujet du message */}
-        <div className="form-section">
           <label>
-            Sujet:
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={(e) => handleChange(e, 'subject')}
-              required
-            />
+            Subject:
+            <input type="text" name="subject" required />
           </label>
-        </div>
-
-        {/* Partie 3 : Message */}
-        <div className="form-section">
           <label>
             Message:
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={(e) => handleChange(e, 'message')}
-              required
-            />
+            <textarea name="message" cols='30'rows='10' id='message' required />
           </label>
-        </div>
-
-        {/* Bouton Soumettre */}
-        <button type="submit">Envoyer</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
 
-// Composant principal de l'application
-function App() {
-  return (
-    <div className="App">
-      {/* Afficher le formulaire de contact */}
-      <Contact />
-    </div>
-  );
-}
-
-// Exporter le composant principal
-export default App;
+export default Contact;

@@ -12,7 +12,7 @@ const WhoIam = () => {
         <p className="mydescription">
           I am a French web developer, I am currently perfecting my skills in
           web development, particularly <br></br> in programming languages
-          ​​such as (Javascript and, php)
+          ​​such as Javascript
           <div className="button-projects">
            <a href="#projectSection" className="btn btn-projects">
             Projects

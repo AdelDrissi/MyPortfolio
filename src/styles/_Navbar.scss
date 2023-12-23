@@ -26,6 +26,7 @@
     .name {
       position: relative;
       color: black;
+      font-weight: 700;
       font-family: 'Manrope', sans-serif;
       font-size: 20px;
       text-transform: uppercase;
@@ -40,7 +41,7 @@
   .anchorLinks {
     justify-content: flex-end;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
 
     @include tabAndLess {
@@ -65,7 +66,7 @@
       }
       li {
         list-style-type: none;
-        width: 80px;
+        width: 112px;
         transition-duration: 250ms;
         height: 100%;
         cursor: pointer;
