@@ -26,17 +26,17 @@ const Header = () => {
         >
           <ul className="anchorLinks__list">
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="whoIamSection" smooth={true} duration={800}>
+              <ScrollLink to="whoIamSection" smooth={true} duration={700}>
                 About
               </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="projectSection" smooth={true} duration={800}>
+              <ScrollLink to="projectSection" smooth={true} duration={700}>
                 Projects
               </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="sectionContact" smooth={true} duration={800}>
+              <ScrollLink to="sectionContact" smooth={true} duration={700}>
                 Contact
               </ScrollLink>
             </li>

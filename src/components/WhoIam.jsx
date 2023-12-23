@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
 const WhoIam = () => {
   //Render//
@@ -14,9 +15,9 @@ const WhoIam = () => {
           web development, particularly <br></br> in programming languages
           ​​such as Javascript
           <div className="button-projects">
-           <a href="#projectSection" className="btn btn-projects">
-            Projects
-            </a>
+            <ScrollLink to="projectSection" className='btn btn-projects' smooth={true} duration={700}>
+              Contact
+            </ScrollLink>
           </div>
         </p>
       </div>

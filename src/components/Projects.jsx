@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { listProjects } from '../datas/listProjects';
 
 const Projects = () => {
