@@ -1,0 +1,46 @@
+.aboutDesctiption {
+  text-align: center;
+  padding-top: 14%;
+  padding-left: 2%;
+}
+
+.about-details-paragraphe {
+  font-size: 1.3rem;
+  max-width: 60rem;
+  letter-spacing: 3.2px;
+}
+
+.btn-about{
+    text-transform: uppercase;
+}
+
+.aboutContent-main {
+  padding-left: 7%;
+  width: 50%;
+}
+
+.btn-about {
+  background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
+  padding: 1.5rem 5rem;
+  color: white;
+  display: inline-block;
+  border-radius: 10px 10px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  &:hover {
+   transform: translateY(-3px);
+   transition: .3s;
+    color: white;
+
+  }
+}
+
+
+
+.text-paragraph {
+  padding-left: 3%;
+}
+
+.title-about {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}

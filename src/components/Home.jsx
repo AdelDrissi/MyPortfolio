@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
-const WhoIam = () => {
+const Home = () => {
   //Render//
 
   return (
-    <section className="WhoIam" id="whoIamSection">
+    <section className="WhoIam" id="homeSection">
       <div className="sectionTitle">
         <h2 className="Name-who">
           HEY, MY NAME IS ADEL <br></br>DRISSI
@@ -16,7 +16,7 @@ const WhoIam = () => {
           ​​such as Javascript
           <div className="button-projects">
             <ScrollLink to="projectSection" className='btn btn-projects' smooth={true} duration={700}>
-              Contact
+              Projects
             </ScrollLink>
           </div>
         </p>
@@ -25,4 +25,4 @@ const WhoIam = () => {
   );
 };
 
-export default WhoIam;
+export default Home;

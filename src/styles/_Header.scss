@@ -70,20 +70,24 @@
         transition-duration: 250ms;
         height: 100%;
         cursor: pointer;
+        
         @include tabAndLess {
           height: 50px;
           width: 100%;
           border-bottom: 1px solid black;
           line-height: 50px;
 
+          @include smartphoneOnly{ 
           &:nth-child(1) {
             border-top: 1px solid black;
             margin-top: 50px;
           }
         }
       }
+      }
     }
   }
+  
   .IconResponsive {
     display: none;
     padding: 30px;

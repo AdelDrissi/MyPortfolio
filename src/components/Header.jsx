@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <a className="AdelDev" href="#whoIAmSection">
+        <a className="AdelDev" href='#whoIamSection'>
           <p className="name">Adel Drissi</p>
         </a>
         <div
@@ -26,12 +26,17 @@ const Header = () => {
         >
           <ul className="anchorLinks__list">
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="whoIamSection" smooth={true} duration={700}>
+              <ScrollLink to="homeSection" smooth={true} duration={700}>
+                Home
+              </ScrollLink>
+            </li>
+            <li onClick={() => setIsMenuOpen(false)}>
+              <ScrollLink to="aboutSection" smooth={true} duration={700}>
                 About
               </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="projectSection" smooth={true} duration={700}>
+              <ScrollLink to="projectSection"  smooth={true} duration={700}>
                 Projects
               </ScrollLink>
             </li>
