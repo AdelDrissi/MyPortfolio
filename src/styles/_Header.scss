@@ -4,7 +4,7 @@
 .header {
   z-index: 10;
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   padding-top: 20px;
   background: #fff;
@@ -47,10 +47,13 @@
     @include tabAndLess {
       display: none;
     }
-    &--open {
-      display: block;
-      height: 200px;
-      width: 12%;
+
+    @include smartphoneOnly {
+      &--open {
+        display: block;
+        height: 12%;
+        width: 12%;
+      }
     }
     &__list {
       display: flex;
@@ -70,24 +73,24 @@
         transition-duration: 250ms;
         height: 100%;
         cursor: pointer;
-        
+
         @include tabAndLess {
           height: 50px;
           width: 100%;
           border-bottom: 1px solid black;
           line-height: 50px;
 
-          @include smartphoneOnly{ 
-          &:nth-child(1) {
-            border-top: 1px solid black;
-            margin-top: 50px;
+          @include smartphoneOnly {
+            &:nth-child(1) {
+              border-top: 1px solid black;
+              margin-top: 50px;
+            }
           }
         }
       }
-      }
     }
   }
-  
+
   .IconResponsive {
     display: none;
     padding: 30px;
@@ -97,8 +100,20 @@
       display: inline;
       position: absolute;
       right: 10px;
-      top: -10px;
+      top: 7px;
     }
+  }
+}
+.IconResponsive {
+  display: none;
+  padding: 30px;
+  top: 8px;
+  font-size: 26px;
+  @include smartphoneOnly {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    top: 7px;
   }
 }
 

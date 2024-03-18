@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <section className="WhoIam" id="homeSection">
       <div className="sectionTitle">
-        <h2 className="Name-who">
+        <h1 className="Name-who">
           HEY, MY NAME IS ADEL <br></br>DRISSI
-        </h2>
+        </h1>
         <p className="mydescription">
           I am a French web developer, I am currently perfecting my skills in
           web development, particularly <br></br> in programming languages

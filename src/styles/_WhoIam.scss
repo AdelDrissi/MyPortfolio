@@ -9,17 +9,25 @@
   height: 65vh;
 }
 
+@include smartphoneOnly {
+  .WhoIam {
+    padding-top: 100px;
+    background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
+    height: 75vh;
+  }
+}
+
 .mydescription {
   font-size: 1.2rem;
   color: #fff;
 }
-
-.Name-who {
-  font-size: 7vh;
-  color: #fff;
-  letter-spacing: 3px;
+@include smartphoneOnly {
+  .Name-who {
+    font-size: 6vh;
+    color: #fff;
+    letter-spacing: 3px;
+  }
 }
-
 .button-projects {
   margin-top: 4rem;
 }
@@ -29,9 +37,9 @@
   display: inline-block;
   border-radius: 10px 10px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  &:hover{
-transform: translateY(-3px);
-transition: .3s;
+  &:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
   }
 }
 
@@ -41,6 +49,24 @@ transition: .3s;
   cursor: pointer;
   text-transform: uppercase;
 }
+
+@include tabAndLess {
+  .btn-projects {
+    padding: 1.5rem 8.5rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}
+@include smartphoneOnly {
+  .btn-projects {
+    padding: 1.1rem 8.5rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}
+
 .textPresentation {
   font-weight: 600;
   text-align: center;

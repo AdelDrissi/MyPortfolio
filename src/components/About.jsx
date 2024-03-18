@@ -22,7 +22,8 @@ const About = () => {
                 <strong> Adel Drissi Front-end web developer </strong> located
                 in Paris, having completed and validated my training{' '}
                 <strong>at Openclassrooms.</strong>
-                <br></br> <br></br>being <strong>in professional retraining </strong>,I seized the
+                <br></br> <br></br>being{' '}
+                <strong>in professional retraining </strong>,I seized the
                 opportunity to move towards the digital world, which has always
                 attracted me for a very long time. It is with pleasure that I
                 invite you to my portfolio.
