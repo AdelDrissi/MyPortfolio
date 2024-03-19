@@ -15,7 +15,7 @@ const Home = () => {
           web development, particularly <br></br> in programming languages
           ​​such as Javascript
           <div className="button-projects">
-            <ScrollLink to="projectSection" className='btn btn-projects' smooth={true} duration={700}>
+            <ScrollLink to="projectSection" className='btn btn-projects' smooth={true} duration={800}>
               Projects
             </ScrollLink>
           </div>

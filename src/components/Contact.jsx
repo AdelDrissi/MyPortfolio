@@ -6,7 +6,7 @@ const Contact = () => {
   const refSection = useRef(null);
   useEffect(() => {
     ScrollReveal().reveal(refSection.current, {
-      duration: 1400,
+      duration: 2000,
       distance: '0px',
       easing: 'ease-in-out',
       interval: 200,
@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-form">
-        <div className="sectionTitle" id='sectionContact'>
+        <div className="sectionTitle" id="sectionContact">
           <h2> Contact Me</h2>
         </div>
         <form>
@@ -27,7 +27,7 @@ const Contact = () => {
           </label>
           <label>
             Email:
-            <input type="text" name="email" id='email' required />
+            <input type="text" name="email" id="email" required />
           </label>
           <label>
             Number:
@@ -39,7 +39,13 @@ const Contact = () => {
           </label>
           <label>
             Message:
-            <textarea name="message" cols='30'rows='10' id='message' required />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              id="message"
+              required
+            />
           </label>
           <button type="submit">Submit</button>
         </form>

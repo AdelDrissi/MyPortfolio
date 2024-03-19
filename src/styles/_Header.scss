@@ -38,6 +38,8 @@
     }
   }
 
+
+
   .anchorLinks {
     justify-content: flex-end;
     font-size: 18px;
@@ -52,7 +54,12 @@
       &--open {
         display: block;
         height: 12%;
-        width: 12%;
+      }
+    }
+    @include tabAndLess {
+      &--open {
+        display: block;
+        height: 12%;
       }
     }
     &__list {
@@ -61,6 +68,12 @@
       height: 100%;
       margin-right: 0;
 
+      @include smartphoneOnly {
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 0;
+      }
       @include tabAndLess {
         flex-direction: column;
         background-color: whitesmoke;
@@ -84,6 +97,12 @@
             &:nth-child(1) {
               border-top: 1px solid black;
               margin-top: 50px;
+            }
+          }
+          @include tabAndLess {
+            &:nth-child(1) {
+              margin-top: 30px;
+              
             }
           }
         }

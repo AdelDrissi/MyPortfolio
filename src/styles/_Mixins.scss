@@ -11,7 +11,7 @@
 }
 
 @mixin smartphoneOnly {
-  @media (min-width: 320px) and (max-width: 600px) {
+  @media (min-width: 320px) and (max-width: 620px) {
     @content;
   }
 }
