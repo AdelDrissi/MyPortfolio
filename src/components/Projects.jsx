@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { listProjects } from '../datas/listProjects';
-
-
+import ScrollReveal from 'scrollreveal';
 
 const Projects = () => {
+  useEffect(() => {
+    ScrollReveal().reveal('.project', {
+      delay: 200,
+      duration: 1000,
+      opacity: 0,
+      scale: 0.85,
+      distance: '20px',
+      easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing personnalisé pour une transition douce
+      reset: true, // Réinitialise l'élément après la révélation pour pouvoir le révéler à nouveau
+    });
+  }, []);
+
   // Render
   return (
     <section className="projectSection" id="projectSection">
