@@ -1,16 +1,17 @@
 import React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
 const Contact = () => {
-  const refSection = useRef(null);
   useEffect(() => {
-    ScrollReveal().reveal(refSection.current, {
-      duration: 2000,
-      distance: '0px',
-      easing: 'ease-in-out',
-      interval: 200,
-      reset: true,
+    ScrollReveal().reveal('.contact-form', {
+      delay: 200,
+      duration: 1000,
+      opacity: 0,
+      scale: 0.85,
+      distance: '20px',
+      easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing personnalisé pour une transition douce
+      reset: true, // Réinitialise l'élément après la révélation pour pouvoir le révéler à nouveau
     });
   }, []);
 

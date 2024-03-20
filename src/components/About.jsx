@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import ScrollReveal from 'scrollreveal';
+
 
 const About = () => {
+  useEffect(() => {
+    ScrollReveal().reveal('.about', {
+      delay: 200,
+      duration: 2000,
+      opacity: 0,
+      scale: 0.85,
+      distance: '20px',
+      easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing personnalisé pour une transition douce
+      reset: true, // Réinitialise l'élément après la révélation pour pouvoir le révéler à nouveau
+    });
+  }, []);
+
+
   //Render//
   return (
     <section className="about" id="aboutSection">
