@@ -1,19 +1,22 @@
 import React from 'react';
-import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
+import { useState } from 'react';
 
 const Contact = () => {
-  useEffect(() => {
-    ScrollReveal().reveal('.contact-form', {
-      delay: 200,
-      duration: 1000,
-      opacity: 0,
-      scale: 0.85,
-      distance: '20px',
-      easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing personnalisé pour une transition douce
-      reset: true, // Réinitialise l'élément après la révélation pour pouvoir le révéler à nouveau
-    });
-  }, []);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="contact-container">
@@ -21,22 +24,52 @@ const Contact = () => {
         <div className="sectionTitle" id="sectionContact">
           <h2> Contact Me</h2>
         </div>
-        <form>
+        <form
+          name="contact"
+          method="POST"
+          onSubmit={handleSubmit}
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <label>
             Name:
-            <input type="text" name="name" required />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Email:
-            <input type="text" name="email" id="email" required />
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Number:
-            <input type="tel" name="phone" required />
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Subject:
-            <input type="text" name="subject" required />
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Message:
@@ -44,7 +77,8 @@ const Contact = () => {
               name="message"
               cols="30"
               rows="10"
-              id="message"
+              value={formData.message}
+              onChange={handleChange}
               required
             />
           </label>
