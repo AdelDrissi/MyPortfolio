@@ -25,17 +25,17 @@ const Home = () => {
           I am a French web developer, I am currently perfecting my skills in
           web development, particularly <br></br> in programming languages
           ​​such as Javascript
-          <div className="button-projects">
-            <ScrollLink
-              to="projectSection"
-              className="btn btn-projects"
-              smooth={true}
-              duration={800}
-            >
-              Projects
-            </ScrollLink>
-          </div>
         </p>
+        <div className="button-projects">
+          <ScrollLink
+            to="projectSection"
+            className="btn btn-projects"
+            smooth={true}
+            duration={800}
+          >
+            Projects
+          </ScrollLink>
+        </div>
       </div>
     </section>
   );
