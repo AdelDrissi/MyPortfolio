@@ -16,7 +16,6 @@ const Contact = () => {
   }, []);
 
 
-
   return (
     <div className="contact">
       <form
@@ -24,11 +23,13 @@ const Contact = () => {
         method="post"
         className="contact__form"
         data-netlify="true"
-        onSubmit='onSubmit'
+        onSubmit="onSubmit"
       >
-        <h2 className="title-contact">Contact me</h2>
+        <div className="sectionTitle" id="sectionContact">
+          <h2> Contact Me</h2>
+        </div>
 
-        <input type="hidden" name='form-name' value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <label htmlFor="name">Name : </label>
         <input type="text" name="name" />
 
