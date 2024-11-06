@@ -56,7 +56,8 @@ const Contact = () => {
     // Créer le lien mailto
     const mailtoLink = `mailto:tonemail@gmail.com?subject=Message from ${name}&body=Email: ${email}%0A%0AMessage:%0A${message}`;
 
-    window.location.href = mailtoLink; // Ouvre l'email avec le pré-remplissage
+    // Rediriger l'utilisateur vers son client de messagerie 
+    window.location.href = mailtoLink; // Cela ouvrira l'interface de composition du mail
   };
 
   useEffect(() => {
