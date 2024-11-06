@@ -4,6 +4,7 @@ import kanap from '../assets/kanap.png';
 import chouetteagence from '../assets/chouetteagence.png';
 import ohmyfood from '../assets/ohmyfood.png';
 import reservia from '../assets/reservia.png';
+import Pokedex from '../assets/Pokedex.png'
 
 export const listProjects = [
   {
@@ -12,7 +13,7 @@ export const listProjects = [
     cover: groupomania,
     description:
       "Full Stack | Création d'un réseau social d'entreprise dans son intégralité.",
-    link: 'https://github.com/Adelwa91/AdelDrissi_7_0302022',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_7_0302022',
   },
   {
     name: 'Hot Takes',
@@ -20,7 +21,7 @@ export const listProjects = [
     cover: hottakes,
     description:
       "Back-end | Création d'une application web afin que les utilisateurs puissent noter des sauces piquantes",
-    link: 'https://github.com/Adelwa91/AdelDrissi_6_14012022',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_6_14012022',
   },
   {
     name: 'Kanap',
@@ -28,7 +29,7 @@ export const listProjects = [
     cover: kanap,
     description: "Front-End | Création de la partie front d'un site e-commerce",
 
-    link: 'https://github.com/Adelwa91/AdelDrissi_5_07122021',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_5_07122021',
   },
   {
     name: 'La Chouette Agence',
@@ -36,7 +37,7 @@ export const listProjects = [
     cover: chouetteagence,
     description: "SEO | Amélioration du référencement et de l'accessibilité",
 
-    link: 'https://github.com/Adelwa91/AdelDrissi_4_15112021',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_4_15112021',
   },
   {
     name: 'OhMyFood!',
@@ -44,7 +45,7 @@ export const listProjects = [
     cover: ohmyfood,
     description:
       "Front-End | Création à partir de maquettes d'un site de réservation de menu en ligne",
-    link: 'https://github.com/Adelwa91/AdelDrissi_3_01092021',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_3_01092021',
   },
   {
     name: 'Réservia',
@@ -52,6 +53,14 @@ export const listProjects = [
     cover: reservia,
     description:
       "Front-End | Création à partir de maquettes d'un site de plannification de vacances",
-    link: 'https://github.com/Adelwa91/AdelDrissi_2_29072021',
+    link: 'https://github.com/Adeldrissi/AdelDrissi_2_29072021',
+  },
+  {
+    name: 'Pokédex',
+    id: 7,
+    cover: Pokedex,
+    description:
+      "Front-End | Création d'une Application de Pokédex regroupant divers statistiques",
+    link: 'https://github.com/Adeldrissi/Pokedex',
   },
 ];
