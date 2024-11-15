@@ -4,7 +4,7 @@ import kanap from '../assets/kanap.png';
 import chouetteagence from '../assets/chouetteagence.png';
 import ohmyfood from '../assets/ohmyfood.png';
 import reservia from '../assets/reservia.png';
-import Pokedex from '../assets/Pokedex.png'
+// import Pokedex from '../assets/Pokedex.png'
 
 export const listProjects = [
   {
@@ -55,12 +55,12 @@ export const listProjects = [
       "Front-End | Création à partir de maquettes d'un site de plannification de vacances",
     link: 'https://github.com/Adeldrissi/AdelDrissi_2_29072021',
   },
-  {
-    name: 'Pokédex',
-    id: 7,
-    cover: Pokedex,
-    description:
-      "Front-End | Création d'une Application de Pokédex regroupant divers statistiques",
-    link: 'https://github.com/Adeldrissi/Pokedex',
-  },
+  // {
+  //   name: 'Pokédex',
+  //   id: 7,
+  //   cover: Pokedex,
+  //   description:
+  //     "Front-End | Création d'une Application de Pokédex regroupant divers statistiques",
+  //   link: 'https://github.com/Adeldrissi/Pokedex',
+  // },
 ];
