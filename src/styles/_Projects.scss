@@ -32,15 +32,19 @@
   box-shadow: 10px 10px 10px grey;
   transition-duration: 200ms;
 
-  &:hover {
-    transform: translateY(-10px);
-  }
+  // &:hover {
+  //   transform: translateY(-10px);
+  // }
 }
 
 .projectTitle {
   color: #fff;
   background: linear-gradient(to right, #3498db, #6ab7ff, #a9cce3);
   margin: 0;
+  &:hover {
+    color: black;
+    transition: 1s;
+  }
 }
 
 .projetDescription {
@@ -52,4 +56,3 @@
   text-align: center;
   padding-top: 3%;
 }
-

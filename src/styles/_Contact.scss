@@ -16,7 +16,6 @@
   font-style: italic;
 }
 
-
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -38,10 +37,10 @@
 .contact__form input,
 .contact__form textarea,
 .contact__form button {
-border: 2px solid;
-border-radius: 5px;
-margin-bottom: 3%;
-padding: 8px;
+  border: 2px solid;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  padding: 8px;
 }
 
 .contact__form button {
@@ -51,4 +50,10 @@ padding: 8px;
   padding: 10px 20px;
   letter-spacing: 1px;
   border: none;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-4px);
+    transition: 1s;
+    color: black;
+  }
 }
