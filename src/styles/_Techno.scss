@@ -11,13 +11,12 @@
   }
   @include tabAndLess {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
   }
   @include smartphoneOnly {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
-
 }
 .technology {
   display: flex;
@@ -42,21 +41,19 @@
 }
 
 .progressFill {
-  width: 75%; /* Ajuste cette valeur selon le niveau de maîtrise */
-  height: 20px; /* Ajuste la hauteur de la barre */
-  background-color: #007bff; /* Change la couleur selon ton thème */
-  transition: width 0.5s ease; /* Pour une animation douce */
-  border-radius: 5px; /* Pour rendre les bords arrondis */
+  height: 100%;
+  background-color: blue;
+  transition: width 1s ease-in-out; /* Durée et type d'animation */
 }
 
 .technology:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'élément */
-  transition: transform 0.3s ease;
+  transform: scale(1.2); /* Agrandit légèrement l'élément */
+  transition: transform 1s ease;
 }
 
 .technologiesSection {
   background-color: #f4f4f4; /* Change cette couleur selon ton thème */
   padding: 40px 0; /* Ajoute de l'espace autour du contenu */
   border-radius: 10px; /* Optionnel : rend les bords arrondis */
-  margin: 20px 20px ;
+  margin: 20px 20px;
 }
