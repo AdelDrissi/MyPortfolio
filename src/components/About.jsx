@@ -24,7 +24,7 @@ const About = () => {
         <h2 className="aboutDesctiption">
           <span className="title-about">About me</span>
           <p className="text-paragraph">
-            My name is Adel Drissi, I am 29 years old and I am passionate about
+            My name is Adel Drissi, I am 30 years old and I am passionate about
             programming.
           </p>
         </h2>
@@ -34,7 +34,7 @@ const About = () => {
             <div className="aboutContent-details">
               <p className="about-details-paragraphe">
                 Hey! It's Getting to know me Hey! This is{' '}
-                <strong> Adel Drissi Front-end web developer </strong> located
+                <strong> Adel Drissi Web developer </strong> located
                 in Paris, having completed and validated my training{' '}
                 <strong>at Openclassrooms.</strong>
                 <br></br> <br></br>being{' '}
