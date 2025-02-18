@@ -8,8 +8,8 @@ const Projects = () => {
       delay: 200,
       duration: 1000,
       opacity: 0,
-      scale: 0.85,
-      distance: '20px',
+      scale: 1.5,
+      distance: '30px',
       easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing personnalisé pour une transition douce
       reset: true, // Réinitialise l'élément après la révélation pour pouvoir le révéler à nouveau
     });
